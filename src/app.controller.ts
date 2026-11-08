@@ -10,18 +10,5 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('users')
-  async getUsers() {
-    return this.appService.findAll();
-  }
   
-  @Get('create-user')
-  async createUser() {
-    const newUser = {
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      password: 'password123',
-    };
-    return this.appService.create(newUser);
-  }
 }
